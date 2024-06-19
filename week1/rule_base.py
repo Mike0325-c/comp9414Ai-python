@@ -64,6 +64,7 @@ bp = plt.boxplot(steps, showmeans=True)
 plt.title("Number of steps needed")
 plt.xlabel("Method")
 plt.ylabel("Actions")
+plt.legend('23432')
 plt.xticks(np.arange(1,5), ('Random', 'Always right', 'Two rules', 'Four rules'))
 plt.show()
 
