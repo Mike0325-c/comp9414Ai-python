@@ -22,3 +22,13 @@ def count_num(n):
     return counter
 
 print(count_num(123132))
+
+
+test = 'abcd'
+print(test[1:4:-1])
+
+class B:
+    def __init__(self) -> None:
+        print("creste")
+    
+account = B()
