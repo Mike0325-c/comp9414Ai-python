@@ -43,6 +43,7 @@ from tensorflow.keras.applications.vgg16 import preprocess_input
 base_model = VGG16(weights="imagenet", include_top=False, input_shape=(32, 32, 3))
 base_model.trainable = False ## Not trainable weights
 
+
 ## Preprocessing part 2
 train_ds = tf.image.grayscale_to_rgb(tf.expand_dims(train_ds, -1))
 train_ds = tf.image.resize(train_ds, (32, 32))
