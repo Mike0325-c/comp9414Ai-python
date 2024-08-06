@@ -66,13 +66,16 @@ class IdDfsAgent(Agent):
         self.start = self.state
         self.step = 0
 
-        self.path = []
-        """
-        <TODO>
-        
-        self.path = 
-        
-        """
+        for depth in range(0, 100000):
+            self.path = dfs.find_path(self.gw.immtileneighbours,
+                                        self.start,
+                                        self.goal,
+                                        [],
+                                        lambda tile: not self.gw.tileblocked(*self.gw.indextopos(tile)),
+                                        depth)
+            if self.path != []:
+                break
+
         print(self.path)
 
 
