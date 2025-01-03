@@ -10,7 +10,7 @@ def find_path(
         return []
 
     visited.append(start)  # Use a set for visited to improve efficiency
-
+    
     # check neighbours
     neighbours = neighbour_fn(start)
     for n in neighbours:
